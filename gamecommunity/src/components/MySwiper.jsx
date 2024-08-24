@@ -27,10 +27,13 @@ export default function MySwiper() {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        loop:true
+        loop={true}
         pagination={{
           clickable: false
         }}
+        effect="fade"
+        fadeEffect={{ crossFade: true }}
+        speed={4000} // Adjust the speed for smoother transitions
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
