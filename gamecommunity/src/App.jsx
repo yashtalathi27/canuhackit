@@ -2,11 +2,17 @@ import {useEffect, useState} from 'react'
 import './App.css'
 import Header from '../src/components/header/header';
 import Home from './components/Home';
+<<<<<<< HEAD
 import {useAppStore} from "./store/index.js";
 import MyAllGames from './components/MyAllGames.jsx';
 import Signup from './components/signup.jsx';
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
 import Review from './components/Review.jsx';
+=======
+import { Outlet } from 'react-router-dom';
+import {useAppStore} from "./store/index.js";
+
+>>>>>>> ee09d4a8e0130d27316171c4668bb9e133b52d61
 
 import axios from "axios";
 
