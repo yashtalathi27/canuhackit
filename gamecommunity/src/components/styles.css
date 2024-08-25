@@ -1,3 +1,5 @@
+
+
 #app {
     height: 100%;
   }
@@ -6,6 +8,7 @@
     position: relative;
     height: 100%;
     color: white;
+    font-family: poppins;
   }
   
   body {
@@ -31,6 +34,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(0deg,black,#892be28d);
   }
   
   .swiper-slide img {
@@ -38,5 +42,52 @@
     width: 80%;
     height: 60vh;
     /* object-fit: contain; */
+    border-radius: 15px;
+    
   }
   
+  /* Custom styles for Swiper navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: #892be2f8; /* Purple background color */
+  color: #fff; /* White arrow color */
+  border-radius: 10px; /* Rounded corners */
+  width: 40px; /* Adjust the width */
+  height: 40px; /* Adjust the height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8; /* Slight transparency */
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 1; /* Full opacity on hover */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Position adjustments */
+.swiper-button-next {
+  right: 10px; /* Position to the right */
+}
+
+.swiper-button-prev {
+  left: 10px; /* Position to the left */
+}
+
+/* Add some shadow for depth */
+.swiper-button-next,
+.swiper-button-prev {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 36px; /* Adjust the size */
+  content: '›'; /* Customize the arrow */
+}
+
+.swiper-button-prev::after {
+  content: '‹'; /* Customize the arrow */
+}
