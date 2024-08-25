@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom'
 function Header() {
     const navigate=useNavigate();
     return (
-        <header className="flex justify-between items-center p-5 bg-gray-900">
-            <div className="text-2xl font-bold text-purple-500">GAME STORE</div>
+        <header className="w-full flex justify-between items-center p-5 bg-gray-900">
+            <div className=" text-2xl font-bold text-purple-500">GAME STORE</div>
             <nav>
             <ul className="flex space-x-6 text-white">
                     <li><button onClick={() => navigate('/')}>HOME</button></li>

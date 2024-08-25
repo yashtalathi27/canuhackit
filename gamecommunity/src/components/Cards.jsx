@@ -32,12 +32,19 @@ export default function Cards({ imageUrl, type, name, smallDetail, details }) {
             type={type}
             details={smallDetail}
           />
+          
         )}
       </div>
 
       <div className="flex items-center p-[15px] justify-between gap-[5px] relative z-10">
-        <button className="w-[100px] border-2 p-[4px] rounded-2xl">Favourite</button>
-        <button className="w-[100px] border-2 p-[4px] rounded-2xl">Details</button>
+      <button className="w-[100px] border-2 border-gray-500 p-[4px] rounded-2xl hover:bg-gray-700 hover:text-white transition duration-300">
+  Favourite
+</button>
+
+<button className="w-[100px] border-2 border-gray-500 p-[4px] rounded-2xl hover:bg-blue-500 hover:text-white transition duration-300">
+  Enter
+</button>
+
       </div>
     </div>
     </>
