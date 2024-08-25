@@ -1,8 +1,5 @@
 import React from 'react'
 import MySwiper from './MySwiper'
-import Cards from './Cards'
-
-import Headline from './Headline'
 import Trending from './Trending'
 import ShareButtons from './sharebtn'
 import Topcomment from './topcomment'

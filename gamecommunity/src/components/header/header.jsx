@@ -10,10 +10,8 @@ function Header() {
             <nav>
             <ul className="flex space-x-6 text-white">
                     <li><button onClick={() => navigate('/')}>HOME</button></li>
-                    <li><button onClick={() => navigate('/')}>ABOUT US</button></li>
                     <li><button onClick={() => navigate('/allgames')}>ALL GAMES</button></li>
-                    <li><button onClick={() => navigate('/start')}>TRENDING</button></li>
-                    <li><button onClick={() => navigate('/')}>REVIEWS</button></li>
+                    <li><button onClick={() => navigate('#trend')}>TRENDING</button></li>
                 </ul>
             </nav>
         </header>
