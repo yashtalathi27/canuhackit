@@ -38,14 +38,53 @@ export default function MySwiper() {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper "
       >
-        <SwiperSlide>
-            <img src={image1}/>
-        </SwiperSlide>
-        <SwiperSlide><img  src={image2}/></SwiperSlide>
-        <SwiperSlide><img src={image3}/></SwiperSlide>
-        <SwiperSlide><img src={image4}/></SwiperSlide>
-        <SwiperSlide><img src={image5}/></SwiperSlide>
+         <SwiperSlide>
+    <div className="image-container relative">
+
+      <p><h1 className='text-[70px] text-white absolute left-[-440px] top-[160px]'>Game Name</h1>
+      <h1 className='text-[10px] text-white absolute left-[-440px] top-[260px]'>Game Name</h1>
+      </p>
+      <img src={image1} alt="Slide 1" />
+      <div className="gradient-overlay"></div>
+    </div>
+  </SwiperSlide>
+  <SwiperSlide>
+    <div className="image-container">
+    <p><h1 className='text-[70px] text-white absolute left-[-440px] top-[160px]'>Game Name</h1>
+    <h1 className='text-[10px] text-white absolute left-[-440px] top-[260px]'>Game Name</h1>
+    </p>
+      <img src={image2} alt="Slide 2" />
+      <div className="gradient-overlay"></div>
+    </div>
+  </SwiperSlide>
+  <SwiperSlide>
+    <div className="image-container">
+    <p><h1 className='text-[70px] text-white absolute left-[-440px] top-[160px]'>Game Name</h1>
+    <h1 className='text-[10px] text-white absolute left-[-440px] top-[260px]'>Game Name</h1></p>
+    
+      <img src={image3} alt="Slide 3" />
+      <div className="gradient-overlay"></div>
+    </div>
+  </SwiperSlide>
+  <SwiperSlide>
+    <div className="image-container">
+    <p><h1 className='text-[70px] text-white absolute left-[-440px] top-[160px]'>Game Name</h1>
+    <h1 className='text-[10px] text-white absolute left-[-440px] top-[260px]'>Game Name</h1></p>
+      <img src={image4} alt="Slide 4" />
+      <div className="gradient-overlay"></div>
+    </div>
+  </SwiperSlide>
+  <SwiperSlide>
+    <div className="image-container">
+    <p><h1 className='text-[70px] text-white absolute left-[-440px] top-[160px]'>Game Name</h1>
+    <h1 className='text-[10px] text-white absolute left-[-440px] top-[260px]'>Game Name</h1></p>
+      <img src={image5} alt="Slide 5" />
+      <div className="gradient-overlay"></div>
+    </div>
+  </SwiperSlide>
       </Swiper>
     </>
   );
 }
+
+
