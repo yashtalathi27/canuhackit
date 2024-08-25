@@ -3,7 +3,11 @@ import './App.css'
 import Header from '../src/components/header/header';
 import Home from './components/Home';
 import { Outlet } from 'react-router-dom';
+<<<<<<< HEAD
 import {useAppStore} from "./store/index.js";
+=======
+import {useAppStore} from "./store  /index.js";
+>>>>>>> 74db6f30afbee3b705334314d22810eff1d561fc
 import axios from "axios";
 
 function App() {
