@@ -16,10 +16,6 @@ function Header() {
                     <li><button onClick={() => navigate('/')}>REVIEWS</button></li>
                 </ul>
             </nav>
-            <div>
-                <button onClick={() => navigate('/signup')}
-                className="bg-purple-600 text-white py-2 px-4 rounded mr-2">Sign up</button>
-            </div>
         </header>
     )
 }
