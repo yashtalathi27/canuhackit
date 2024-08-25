@@ -7,5 +7,16 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.writing-mode-vertical': {
+          'writing-mode': 'vertical-rl',
+        },
+        '.text-orientation-upright': {
+          'text-orientation': 'upright',
+        },
+      });
+    },
+  ],
 }

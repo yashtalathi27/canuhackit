@@ -4,6 +4,8 @@ export default function Cards({ imageUrl, type, name, smallDetail, details }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
+    <>
+    <span className='text-white writing-mode-vertical text-orientation-upright pl-[30px]'>game names</span>
     <div
       className="text-white max-w-[15vw] h-[300px] bg-violet-950 rounded-[15px] p-2 relative transition-opacity duration-300"
     >
@@ -38,5 +40,6 @@ export default function Cards({ imageUrl, type, name, smallDetail, details }) {
         <button className="w-[100px] border-2 p-[4px] rounded-2xl">Details</button>
       </div>
     </div>
+    </>
   );
 }
