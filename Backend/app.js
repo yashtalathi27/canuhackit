@@ -119,7 +119,7 @@ app.put("/changeProfile/:courseid", async (req, res) => {
 });
 
 
-app.post("/reviews  /:gameid", async (req, res) => {
+app.post("/reviews/:gameid", async (req, res) => {
     const review = req.body;
 
     if (review) {
