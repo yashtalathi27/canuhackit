@@ -8,6 +8,7 @@ import MyAllGames from './components/MyAllGames.jsx';
 import Signup from './components/signup.jsx';
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import Review from './components/Review.jsx';
 
 import { Outlet } from 'react-router-dom';
@@ -18,7 +19,11 @@ import { Outlet } from 'react-router-dom';
 >>>>>>> Stashed changes
 
 
+=======
+>>>>>>> Stashed changes
 import axios from "axios";
+import Reviews from './components/Reviews.jsx';
+import Start from './components/Start.jsx';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -65,10 +70,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/" element={<Home />} />
           <Route path="/allgames" element={<MyAllGames />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/start" element={<Start />} />
+          <Route path="/allgames/Review" element={<Reviews />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/:name" element={<Review />} />
         </Routes>
       </div>
     </BrowserRouter>

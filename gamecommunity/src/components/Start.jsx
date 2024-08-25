@@ -6,12 +6,13 @@ import Headline from './Headline'
 import Trending from './Trending'
 import ShareButtons from './sharebtn'
 import Topcomment from './topcomment'
+import NetflixInspire from './NetflixInspire'
 
-export default function Home() {
+export default function Start() {
   return (
     <>
     <div className='pt-[80px]'>
-    <MySwiper/>
+    <NetflixInspire/>
     </div>
     <Trending/>
     <div className='flex mt-5'>

@@ -14,7 +14,7 @@ export default function Cards({ imageUrl, type, name, smallDetail, details }) {
     <>
     
     <div
-      className="text-white max-w-[15vw] h-[300px] bg-violet-950 rounded-[15px] p-2 relative transition-opacity duration-300 flex flex-col items-center"
+      className="text-white max-w-[20vw] h-[300px] bg-violet-950 rounded-[15px] p-[4px] relative transition-opacity duration-300 flex flex-col items-center"
 
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -26,7 +26,7 @@ export default function Cards({ imageUrl, type, name, smallDetail, details }) {
           src={imageUrl}
           className="rounded-[15px] w-full h-[100%] p-2"
           alt={name}
-          onClick={()=>navigate('./review')}
+          onClick={()=>navigate('./Review')}
         />
         
         <div className="pb-[6px] pl-1">{name}</div>

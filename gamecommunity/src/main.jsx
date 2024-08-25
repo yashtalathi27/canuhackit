@@ -9,8 +9,8 @@ import Home from './components/Home.jsx';
 import store from './components/store.js';
 import ErrorPage from './components/ErrorPage.jsx';
 import MyAllGames from './components/MyAllGames.jsx';
+import Reviews from './components/Reviews.jsx';
 // Define routes
-
 
 // Render the application
 createRoot(document.getElementById('root')).render(
