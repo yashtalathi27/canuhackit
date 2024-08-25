@@ -8,6 +8,7 @@ const session = require("express-session");
 const passport = require("passport");
 const OAuth2Strategy = require("passport-google-oauth2").Strategy;
 const userdb = require("./Models/userSchema");
+const Reviews = require("./Models/reviewSchema");
 
 const clientid = process.env.CLIENT_ID;
 const clientsecret = process.env.CLIENT_SECRET;
@@ -80,7 +81,7 @@ app.get(
 app.get(
   "/auth/google/callback",
   passport.authenticate("google", {
-    successRedirect: "http://localhost:5173/profile",
+    successRedirect: "http://localhost:5173/",
     failureRedirect: "http://localhost:5173/login",
   })
 );
@@ -116,6 +117,18 @@ app.put("/changeProfile/:courseid", async (req, res) => {
     return res.status(200).json({ message: "User updated successfully" });
   }
 });
+
+
+app.post("/reviews  /:gameid", async (req, res) => {
+    const review = req.body;
+
+    if (review) {
+        const reviewSave = new Reviews(review);
+        await review.save();
+        res.send(reviewSave);
+        return res.status(200);
+    }
+})
 
 app.listen(PORT, () => {
   console.log(`server start at port no ${PORT}`);
