@@ -4,6 +4,11 @@ import { useNavigate } from 'react-router-dom'
 
 function Header() {
     const navigate=useNavigate();
+
+    const loginWithGoogle = () => {
+        window.open("http://localhost:6005/auth/google/callback", "_self");
+    }
+
     return (
         <header className="flex justify-between items-center p-5 bg-gray-800 bg-opacity-50 backdrop-blur-[10px] fixed z-50 w-full">
             <div className="text-2xl font-bold text-purple-500">GAME STORE</div>
@@ -17,7 +22,7 @@ function Header() {
                 </ul>
             </nav>
             <div>
-                <button onClick={() => navigate('/signup')}
+                <button onClick={loginWithGoogle}
                 className="bg-purple-600 text-white py-2 px-4 rounded mr-2">Sign up</button>
             </div>
         </header>
