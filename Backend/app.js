@@ -118,17 +118,18 @@ app.put("/changeProfile/:courseid", async (req, res) => {
   }
 });
 
-
 app.post("/reviews/:gameid", async (req, res) => {
-    const review = req.body;
+  const review = req.body;
 
-    if (review) {
-        const reviewSave = new Reviews(review);
-        await review.save();
-        res.send(reviewSave);
-        return res.status(200);
-    }
-})
+  if (review) {
+    const reviewSave = new Reviews(review);
+    await reviewSave.save();
+    res.send(reviewSave);
+    return res.status(200);
+  } else {
+    return res.status(400).json({ message: "reviews Not found" });
+  }
+});
 
 app.listen(PORT, () => {
   console.log(`server start at port no ${PORT}`);
