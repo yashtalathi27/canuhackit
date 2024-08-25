@@ -7,7 +7,6 @@ import {useAppStore} from "./store/index.js";
 import MyAllGames from './components/MyAllGames.jsx';
 import Signup from './components/signup.jsx';
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
-
 import axios from "axios";
 import Reviews from './components/Reviews.jsx';
 import Start from './components/Start.jsx';
@@ -66,5 +65,4 @@ function App() {
     </>
   )
 }
-
 export default App
