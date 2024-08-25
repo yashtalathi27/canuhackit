@@ -11,6 +11,7 @@ import { BrowserRouter,Route,Routes } from 'react-router-dom';
 import axios from "axios";
 import Reviews from './components/Reviews.jsx';
 import Start from './components/Start.jsx';
+import Footer from './components/footer.jsx';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -62,6 +63,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
         </Routes>
       </div>
+      <Footer />
     </BrowserRouter>
     </>
   )

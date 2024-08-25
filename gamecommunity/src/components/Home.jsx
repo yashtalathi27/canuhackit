@@ -6,6 +6,7 @@ import Headline from './Headline'
 import Trending from './Trending'
 import ShareButtons from './sharebtn'
 import Topcomment from './topcomment'
+import Footer from './footer'
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <ShareButtons/>
     </div>
     <Topcomment/>
+    
     </>
   )
 }
