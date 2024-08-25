@@ -36,12 +36,12 @@ export default function MySwiper() {
         speed={4000} // Adjust the speed for smoother transitions
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper "
       >
         <SwiperSlide>
             <img src={image1}/>
         </SwiperSlide>
-        <SwiperSlide><img src={image2}/></SwiperSlide>
+        <SwiperSlide><img  src={image2}/></SwiperSlide>
         <SwiperSlide><img src={image3}/></SwiperSlide>
         <SwiperSlide><img src={image4}/></SwiperSlide>
         <SwiperSlide><img src={image5}/></SwiperSlide>

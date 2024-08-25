@@ -10,11 +10,17 @@
     color: white;
     font-family: poppins;
   }
+
+ 
   
   body {
+<<<<<<< HEAD
     /* background: linear-gradient(45deg, #700a3d, #480a82); */
     background-color: #201F31;
     background-size: cover;
+=======
+    background:  #201F31;
+>>>>>>> 94e4495c8fbe3ed8812ed24d69719a23ce6ee2c1
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #000;
@@ -36,7 +42,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(0deg,black,#892be28d);
+    background: linear-gradient(0deg, #201F31,#892be28d);
   }
   
   .swiper-slide img {
@@ -92,4 +98,32 @@
 
 .swiper-button-prev::after {
   content: '‹'; /* Customize the arrow */
+}
+
+/* styles.css */
+.gradient-slide {
+  position: relative;
+}
+
+.gradient-slide img {
+  display: block; /* Ensure the image is a block-level element */
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.gradient-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  /* Adjust the gradient colors and direction as needed */
+  z-index: 1; /* Ensure the gradient is above the image */
+}
+
+.gradient-slide img {
+  position: relative;
+  z-index: 0; /* Ensure the image is below the gradient */
 }
