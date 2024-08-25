@@ -84,8 +84,8 @@ app.get(
 app.get(
     "/auth/google/callback",
     passport.authenticate("google", {
-        successRedirect: "http://localhost:5173/",
-        failureRedirect: "http://localhost:5173/login",
+        successRedirect: "http://localhost:5173/home",
+        failureRedirect: "http://localhost:5173/",
     })
 );
 
@@ -164,10 +164,10 @@ app.post("/authenticate", async (req, res) => {
     const {username} = req.body;
 
     try {
-        const r = await axios.put('https://api.chatengine.io/users/',
+        const r = await axios.put("https://api.chatengine.io/users/",
             {username: username,secret:username,first_name:username},
-            {headers: {"private-key":"8d2487ea-2b27-40a6-908d-8d950408de01"}}
-        )
+            {headers: {"private-key":"5498dcf7-de2a-4a3f-8987-430956a73fdf"}}
+        );
         return res.status(r.status).json(r.data)
 
     }catch(err){
