@@ -1,17 +1,14 @@
 const mongoose = require("mongoose");
 
 const gameSchema = new mongoose.Schema({
-    googleId: String,
-    displayName: String,
-    email: String,
+    id: String,
+    name: String,
     image: String,
-    profileSetup: {
-        type: Boolean,
-        default: false
-    }
+    description: String,
+
 }, {timestamps: true});
 
 
-const games = new mongoose.model("games", gameSchema);
+const Games = new mongoose.model("games", gameSchema);
 
-module.exports = games  ;
+module.exports = Games;

@@ -120,10 +120,17 @@ app.put("/changeProfile/:courseid", async (req, res) => {
     }
 });
 
+<<<<<<< Updated upstream
 
 app.post("/reviews/:gameid", async (req, res) => {
     const review = req.body;
 
+=======
+
+app.post("/reviews/:gameid", async (req, res) => {
+    const review = req.body;
+
+>>>>>>> Stashed changes
     if (review) {
         const reviewSave = new Reviews(review);
         await reviewSave.save();
@@ -147,6 +154,7 @@ app.post("/games/images", async (req, res) => {
     }else{
         return res.status(400).json({ message: "Game not found" });
     }
+<<<<<<< Updated upstream
 });
 
 app.get('/games', async (req, res) => {
@@ -160,5 +168,20 @@ app.get('/games', async (req, res) => {
 });
 
 app.listen(PORT, () => {
+=======
+});
+
+app.get('/games', async (req, res) => {
+    try {
+        const games = await Games.find();
+        res.json(games);
+    } catch (err) {
+        res.status(500).json({ message: err.message
+        });
+    }
+});
+
+app.listen(PORT, () => {    
+>>>>>>> Stashed changes
     console.log(`server start at port no ${PORT}`);
 });
