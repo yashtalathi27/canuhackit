@@ -1,16 +1,18 @@
 const mongoose = require("mongoose");
 
-const userSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema(
+  {
     googleId: String,
     displayName: String,
     email: String,
     image: String,
     profileSetup: {
-        type: Boolean,
-        default: false
-    }
-}, {timestamps: true});
-
+      type: Boolean,
+      default: false,
+    },
+  },
+  { timestamps: true }
+);
 
 const userdb = new mongoose.model("users", userSchema);
 
