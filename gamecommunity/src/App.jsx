@@ -7,11 +7,15 @@ import {useAppStore} from "./store/index.js";
 import MyAllGames from './components/MyAllGames.jsx';
 import Signup from './components/signup.jsx';
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
+<<<<<<< Updated upstream
 import Review from './components/Review.jsx';
 
 import { Outlet } from 'react-router-dom';
 
 
+=======
+
+>>>>>>> Stashed changes
 
 
 import axios from "axios";
