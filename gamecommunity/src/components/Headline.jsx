@@ -3,10 +3,10 @@ import './headline.css'
 export default function Headline() {
   return (
     <>
-      <div className="back pr-[50px]">
+      <div className="back mt-[30px]">
         TRENDING
       </div>   
-      {/* <h1 className="text-white text-[50px]">NOW</h1> */}
+      <h1 className="back">NOW</h1>
     </>
   );
 }
