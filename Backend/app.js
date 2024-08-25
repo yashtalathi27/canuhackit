@@ -9,8 +9,9 @@ const passport = require("passport");
 const OAuth2Strategy = require("passport-google-oauth2").Strategy;
 const userdb = require("./Models/userSchema");
 const Reviews = require("./Models/reviewSchema");
-const games = require("./Models/gameSchema");
 const Games = require("./Models/gameSchema");
+const axios = require("axios");
+
 
 const clientid = process.env.CLIENT_ID;
 const clientsecret = process.env.CLIENT_SECRET;
@@ -120,17 +121,10 @@ app.put("/changeProfile/:courseid", async (req, res) => {
     }
 });
 
-<<<<<<< Updated upstream
 
 app.post("/reviews/:gameid", async (req, res) => {
     const review = req.body;
 
-=======
-
-app.post("/reviews/:gameid", async (req, res) => {
-    const review = req.body;
-
->>>>>>> Stashed changes
     if (review) {
         const reviewSave = new Reviews(review);
         await reviewSave.save();
@@ -154,7 +148,6 @@ app.post("/games/images", async (req, res) => {
     }else{
         return res.status(400).json({ message: "Game not found" });
     }
-<<<<<<< Updated upstream
 });
 
 app.get('/games', async (req, res) => {
@@ -166,22 +159,22 @@ app.get('/games', async (req, res) => {
         });
     }
 });
+
+app.post("/authenticate", async (req, res) => {
+    const {username} = req.body;
+
+    try {
+        const r = await axios.put('https://api.chatengine.io/users/',
+            {username: username,secret:username,first_name:username},
+            {headers: {"private-key":"8d2487ea-2b27-40a6-908d-8d950408de01"}}
+        )
+        return res.status(r.status).json(r.data)
+
+    }catch(err){
+        console.error(err);
+    }
+})
 
 app.listen(PORT, () => {
-=======
-});
-
-app.get('/games', async (req, res) => {
-    try {
-        const games = await Games.find();
-        res.json(games);
-    } catch (err) {
-        res.status(500).json({ message: err.message
-        });
-    }
-});
-
-app.listen(PORT, () => {    
->>>>>>> Stashed changes
     console.log(`server start at port no ${PORT}`);
 });
