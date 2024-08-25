@@ -7,8 +7,8 @@ import './index.css';
 import Signup from './components/signup.jsx';
 import Home from './components/Home.jsx';
 import store from './components/store.js';
-import Allgames from './components/allgames.jsx';
 import ErrorPage from './components/ErrorPage.jsx';
+import MyAllGames from './components/MyAllGames.jsx';
 // Define routes
 const router = createBrowserRouter([
   {
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/allgames',
-        element: <Allgames />, // Signup page component
+        element: <MyAllGames />, // Signup page component
       },
       // You can add more routes here as needed
     ],

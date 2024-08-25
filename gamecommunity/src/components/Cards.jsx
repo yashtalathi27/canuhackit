@@ -5,9 +5,9 @@ export default function Cards({ imageUrl, type, name, smallDetail, details }) {
 
   return (
     <>
-    <span className='text-white writing-mode-vertical text-orientation-upright pl-[30px]'>game names</span>
+    
     <div
-      className="text-white max-w-[15vw] h-[300px] bg-violet-950 rounded-[15px] p-2 relative transition-opacity duration-300"
+      className="text-white max-w-[15vw] h-[300px] bg-violet-950 rounded-[15px] p-2 relative transition-opacity duration-300 flex flex-col items-center"
     >
       <div
         className="relative"
@@ -35,9 +35,9 @@ export default function Cards({ imageUrl, type, name, smallDetail, details }) {
         )}
       </div>
 
-      <div className="flex items-center p-[15px] justify-between gap-[5px] relative z-10">
-        <button className="w-[100px] border-2 p-[4px] rounded-2xl">Favourite</button>
-        <button className="w-[100px] border-2 p-[4px] rounded-2xl">Details</button>
+      <div className="flex items-center p-[15px] justify-between gap-[15px] relative z-10">
+        <button className="w-full] border-2 pl-[5px] pr-[5px] rounded-2xl">Favourite</button>
+        <button className="w-full border-2 pl-[5px] pr-[5px] rounded-2xl">Details</button>
       </div>
     </div>
     </>
