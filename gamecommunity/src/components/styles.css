@@ -14,9 +14,7 @@
  
   
   body {
-    /* background: linear-gradient(45deg, #700a3d, #480a82); */
-    background-color: #201F31;
-    background-size: cover;
+    background:  #201F31;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #000;

@@ -10,34 +10,11 @@ import store from './components/store.js';
 import ErrorPage from './components/ErrorPage.jsx';
 import MyAllGames from './components/MyAllGames.jsx';
 // Define routes
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />, // Main layout component
-    errorElement: <ErrorPage/>,
-    children: [
-      {
-        path: '/',
-        element: <Home />, // Home page component
-      },
-      {
-        path: '/signup',
-        element: <Signup />, // Signup page component
-      },
-      {
-        path: '/allgames',
-        element: <MyAllGames />, // Signup page component
-      },
-      // You can add more routes here as needed
-    ],
-  },
-]);
+
 
 // Render the application
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Provider store={store} >
-      <RouterProvider router={router} />
-    </Provider>
+    <App/>
   </StrictMode>
 );
