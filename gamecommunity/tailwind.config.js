@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        'custom-violet': 'rgba(255,255,255,0.5)' // Customize the RGBA values as needed
+        'custom-violet': 'rgba(255,255,255,0.5)', // Customize the RGBA values as needed
+        'custom-white': 'rgba(255,255,255,0.1)' // Customize the RGBA values as needed
       }
     }
   },

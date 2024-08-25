@@ -1,30 +1,35 @@
 import React, { useState } from 'react';
 import DetailedCard from './hover';
+import { useNavigate } from 'react-router-dom';
+
+
 export default function Cards({ imageUrl, type, name, smallDetail, details }) {
   const [isHovered, setIsHovered] = useState(false);
+  const navigate=useNavigate();
+
 
   return (
+
+
     <>
     
     <div
       className="text-white max-w-[15vw] h-[300px] bg-violet-950 rounded-[15px] p-2 relative transition-opacity duration-300 flex flex-col items-center"
+
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    
     >
-      <div
-        className="relative"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
+      
+        
         <img
           src={imageUrl}
-          className="rounded-[15px] w-full h-auto"
+          className="rounded-[15px] w-full h-[100%] p-2"
           alt={name}
+          onClick={()=>navigate('./review')}
         />
-        <div className="text-[12px] font-light opacity-40 pt-[4px] pb-[4px]">
-          <span className="text-blue-300">Type: </span>{type}
-        </div>
-        <div className="pb-[6px] pl-1">{name}</div>
-        <p className="opacity-40 text-[12px] pb-[8px] pl-1">{smallDetail}</p>
         
+        <div className="pb-[6px] pl-1">{name}</div>
         {isHovered && (
           <DetailedCard
             imageUrl={imageUrl}
@@ -34,12 +39,8 @@ export default function Cards({ imageUrl, type, name, smallDetail, details }) {
           />
           
         )}
-      </div>
-
-      <div className="flex items-center p-[15px] justify-between gap-[15px] relative z-10">
-        <button className="w-full] border-2 pl-[5px] pr-[5px] rounded-2xl">Favourite</button>
-        <button className="w-full border-2 pl-[5px] pr-[5px] rounded-2xl">Details</button>
-      </div>
+     
+    
     </div>
     </>
   );

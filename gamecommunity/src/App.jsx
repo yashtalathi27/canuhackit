@@ -2,12 +2,12 @@ import {useEffect, useState} from 'react'
 import './App.css'
 import Header from '../src/components/header/header';
 import Home from './components/Home';
-import { Outlet } from 'react-router-dom';
-<<<<<<< HEAD
 import {useAppStore} from "./store/index.js";
-=======
-import {useAppStore} from "./store  /index.js";
->>>>>>> 74db6f30afbee3b705334314d22810eff1d561fc
+import MyAllGames from './components/MyAllGames.jsx';
+import Signup from './components/signup.jsx';
+import { BrowserRouter,Route,Routes } from 'react-router-dom';
+import Review from './components/Review.jsx';
+
 import axios from "axios";
 
 function App() {
@@ -48,8 +48,20 @@ function App() {
 
   return (
     <>
+      <BrowserRouter>
       <Header />
-        <Outlet/>
+      <div > {/* Add margin to avoid overlap with the fixed header */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/allgames" element={<MyAllGames />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/:name" element={<Review />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
     </>
   )
 }
