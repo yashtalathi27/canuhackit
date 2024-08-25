@@ -8,11 +8,13 @@ import Signup from './components/signup.jsx';
 import Home from './components/Home.jsx';
 import store from './components/store.js';
 import Allgames from './components/allgames.jsx';
+import ErrorPage from './components/ErrorPage.jsx';
 // Define routes
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />, // Main layout component
+    errorElement: <ErrorPage/>,
     children: [
       {
         path: '/',
