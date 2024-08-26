@@ -10,6 +10,7 @@ import Reviews from './components/Reviews.jsx';
 import Start from './components/Start.jsx';
 import Home from './components/Home.jsx';
 import Footer from './components/footer.jsx';
+import {ChatPage} from "./components/ChatPage.jsx";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -56,7 +57,8 @@ function App() {
           <Route path="/" element={<Start/>} />
           <Route path="/allgames" element={<MyAllGames />} />
           <Route path="/allgames/Review" element={<Reviews />} />
-          <Route path="/loginned" element={<Home/>} />
+          <Route path="/home" element={<Home/>} />
+          <Route path={"/chat"} element={<ChatPage/>}/>
         </Routes>
       </div>
       <Footer />
