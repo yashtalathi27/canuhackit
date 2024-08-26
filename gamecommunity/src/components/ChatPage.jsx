@@ -6,7 +6,7 @@ export const ChatPage = () => {
     const {userInfo} = useAppStore();
 
     return (
-        <div style={{height:'100vh'}} >
+        <div style={{height:'100vh',paddingTop:'50px'       }} >
             <PrettyChatWindow projectId='8d2487ea-2b27-40a6-908d-8d950408de01'
                               username={userInfo.displayName}
                               secret={userInfo.displayName}
