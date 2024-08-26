@@ -2,14 +2,16 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 
 function Input() {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit,reset } = useForm();
+
 
   const onSubmit = (data) => {
     console.log(data);
+    reset();
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="max-w-[46rem] mx-auto p-4 bg-[#c8a0ec86] shadow-lg rounded-lg">
+    <form onSubmit={handleSubmit(onSubmit)} className="w-[60vh] mx-auto p-2 bg-[#c8a0ec86] shadow-lg rounded-lg">
       <div className="mb-4">
         <label htmlFor="Name" className="block text-sm font-medium text-white">
           First Name
@@ -19,6 +21,7 @@ function Input() {
           placeholder='Enter your Name'
           {...register('Name')}
           className="mt-1  block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 placeholder:text-lg sm:text-sm"
+
         />
       </div>
 
@@ -31,6 +34,7 @@ function Input() {
           placeholder="Enter your comment"
           {...register('Name')}
           className="mt-1 block w-full h-[150px] px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 placeholder:text-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+   
         />
       </div>
 

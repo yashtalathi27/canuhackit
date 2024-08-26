@@ -1,11 +1,14 @@
 import React from 'react'
 
 function Profile() {
-    return (
-        <div >
-            <h1 className='te'>Profile: </h1>
 
-            <img className='w-[150px] h-[120px] mt-[120px]' src="" alt="" />
+    const name="yash";
+
+    return (
+        <div className='' >
+            <h1 className='text-white text-5xl '>Profile: {name} </h1>
+
+            <img className='w-[150px] h-[120px] mt-[120px]' src="/home/yash/Desktop/CanYouHackIt/canuhackit/gamecommunity/src/images/cardImg.jpeg" alt="" />
 
         </div>
     )

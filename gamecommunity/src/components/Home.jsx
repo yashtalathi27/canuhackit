@@ -8,7 +8,7 @@ import Footer from './footer'
 export default function Home() {
   return (
     <>
-    <div className='pt-[80px]'>
+    <div >
     <MySwiper/>
     </div>
     <Trending/>

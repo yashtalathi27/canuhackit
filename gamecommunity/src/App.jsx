@@ -64,6 +64,7 @@ function App() {
           <Route path="/allgames/Review" element={<Reviews />} />
           <Route path="/home" element={<Home/>} />
           <Route path={"/chat"} element={<ChatPage/>}/>
+          <Route path="/profile" element={<Profile/>}/>
         </Routes>
       </div>
       <Footer />

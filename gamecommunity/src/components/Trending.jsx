@@ -14,6 +14,8 @@ export default function Trending() {
           smallDetail="jbscdjhuasdc jv dvkd vdkvbkd vdv kdjv vmd vkv"
           name="Clash Of Clans"
         />
+
+        
         <span className='text-white writing-mode-vertical text-orientation-upright pl-[30px] '>game names <span className='text-yellow-400 writing-mode-vertical text-orientation-upright pl-[30px]' >   01</span></span>
         <Cards
           imageUrl={image}
