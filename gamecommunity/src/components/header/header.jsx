@@ -16,7 +16,8 @@ function Header() {
             <div className="text-2xl font-bold text-purple-500">GAME STORE</div>
             <nav>
             <ul className="flex space-x-6 text-white">
-                    <li><button onClick={() => navigate('/')}>HOME</button></li>
+                    <li><button onClick={() => navigate('/home')}>HOME</button></li>
+                <li><button onClick={()=>{navigate('/chat')}}>CHAT</button> </li>
                     <li><button onClick={() => navigate('/allgames')}>ALL GAMES</button></li>
                     <li><button onClick={() => navigate('#trend')}>TRENDING</button></li>
                     {/* <li><button onClick={() => navigate('/profile')}>Profile</button></li> */}

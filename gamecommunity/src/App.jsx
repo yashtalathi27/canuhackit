@@ -32,7 +32,7 @@ function App() {
         }
       } catch (err) {
         setUserInfo(undefined);
-        console.log(err);
+        // console.log(err);
       } finally {
         setLoading(false);
       }
@@ -61,7 +61,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Start/>} />
           <Route path="/allgames" element={<MyAllGames />} />
-          <Route path="/allgames/Review" element={<Reviews />} />
+          <Route path="/allgames/Review/:gameId" element={<Reviews />} />
           <Route path="/home" element={<Home/>} />
           <Route path={"/chat"} element={<ChatPage/>}/>
           <Route path="/profile" element={<Profile/>}/>

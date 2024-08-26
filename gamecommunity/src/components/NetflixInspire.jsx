@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom'
 export default function NetflixInspire() {
     const navigate=useNavigate();
     const clickTask=()=>{
-        navigate('/login')
         window.open("http://localhost:6005/auth/google/callback","_self")
     }
   return (

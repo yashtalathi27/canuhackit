@@ -3,7 +3,7 @@ import DetailedCard from './hover';
 import { useNavigate } from 'react-router-dom';
 
 
-export default function Cards({ imageUrl, type, name, smallDetail, details }) {
+export default function Cards({ imageUrl, type, name, smallDetail, details,detailed }) {
   const [isHovered, setIsHovered] = useState(false);
   const navigate = useNavigate();
 
@@ -26,7 +26,9 @@ export default function Cards({ imageUrl, type, name, smallDetail, details }) {
           src={imageUrl}
           className={`rounded-[7px] w-full h-[100%] p-2 transition-all duration-300 ${isHovered ? 'blur-sm  ' : ''}`}
           alt={name}
-          onClick={() => navigate('./Review')}
+
+          onClick={() => navigate(`/allgames/Review/`+detailed)}
+
         />
 
 

@@ -12,6 +12,22 @@ const Reviews = require("./Models/reviewSchema");
 const commentRoutes = require("./routes/commentRoutes");
 const clientid = process.env.CLIENT_ID;
 const clientsecret = process.env.CLIENT_SECRET;
+require("dotenv").config();
+const express = require("express");
+const app = express();
+const cors = require("cors");
+require("./Database/connection");
+const PORT = process.env.PORT || 3000;
+const session = require("express-session");
+const passport = require("passport");
+const OAuth2Strategy = require("passport-google-oauth2").Strategy;
+const userdb = require("./Models/userSchema");
+const Reviews = require("./Models/reviewSchema");
+const Games = require("./Models/gameSchema");
+const axios = require("axios");
+
+const clientid = process.env.CLIENT_ID;
+const clientsecret = process.env.CLIENT_SECRET;
 
 app.use(
   cors({
