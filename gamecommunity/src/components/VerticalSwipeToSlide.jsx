@@ -9,10 +9,10 @@ function VerticalSwipeToSlide() {
   const settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    vertical: true,
-    verticalSwiping: true,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    horizontal: true,
+    horizontalSwiping: true,
     swipeToSlide: true,
     beforeChange: function (currentSlide, nextSlide) {
       console.log("before change", currentSlide, nextSlide);
@@ -22,7 +22,7 @@ function VerticalSwipeToSlide() {
     },
   };
   return (
-    <div className="slider-container w-[40%]">
+    <div className="slider-container w-[100%] mb-[40vh]  ">
       <Slider {...settings}>
         {rdata.map((data) => {
           return (

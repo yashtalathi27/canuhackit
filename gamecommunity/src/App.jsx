@@ -11,6 +11,7 @@ import Start from './components/Start.jsx';
 import Home from './components/Home.jsx';
 import Footer from './components/footer.jsx';
 import {ChatPage} from "./components/ChatPage.jsx";
+import Profile from './components/Profile.jsx';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -48,8 +49,12 @@ function App() {
     return <div>Loading.....</div>;
   }
 
+  
+
   return (
+   
     <>
+    
       <BrowserRouter>
       <Header />
       <div > {/* Add margin to avoid overlap with the fixed header */}
@@ -59,6 +64,7 @@ function App() {
           <Route path="/allgames/Review" element={<Reviews />} />
           <Route path="/home" element={<Home/>} />
           <Route path={"/chat"} element={<ChatPage/>}/>
+          <Route path="/profile" element={<Profile/>}/>
         </Routes>
       </div>
       <Footer />
