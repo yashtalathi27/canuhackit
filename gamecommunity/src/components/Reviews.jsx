@@ -5,6 +5,8 @@ import image from "../images/download.jpeg"
 import image2 from "../images/cardImage.jpeg"
 import React, { useRef, useState } from 'react';
 import VerticalSwipeToSlide from './VerticalSwipeToSlide';
+import Input from './Input';
+
 export default function Reviews() {
   return (
     <div className='flex  gap-[50px] pt-[90px] items-start p-[30px]  pr-[50px] justify-between'>
@@ -24,6 +26,8 @@ export default function Reviews() {
       </p>}
       type="Multiplayed"
       imageUrl={image2}/>
+
+      <Input/>
       <VerticalSwipeToSlide/>
     </div>
   )

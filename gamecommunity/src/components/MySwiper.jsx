@@ -24,7 +24,7 @@ export default function MySwiper() {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
+          delay: 1000,
           disableOnInteraction: false,
         }}
         loop={true}
@@ -33,7 +33,7 @@ export default function MySwiper() {
         }}
         effect="fade"
         fadeEffect={{ crossFade: true }}
-        speed={4000} // Adjust the speed for smoother transitions
+        speed={1000} // Adjust the speed for smoother transitions
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper "
@@ -41,7 +41,7 @@ export default function MySwiper() {
          <SwiperSlide>
     <div className="image-container relative">
 
-      <p><h1 className='text-[70px] text-white absolute left-[-440px] top-[160px]'>Game Name</h1>
+      <p><h1 className='text-[70px] text-white absolute left-[-440px] top-[160px]'>PUBG</h1>
       <h1 className='text-[10px] text-white absolute left-[-440px] top-[260px]'>Game Name</h1>
       </p>
       <img src={image1} alt="Slide 1" />

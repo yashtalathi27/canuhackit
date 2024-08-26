@@ -22,7 +22,7 @@ function VerticalSwipeToSlide() {
     },
   };
   return (
-    <div className="slider-container w-[40%]">
+    <div className="slider-container w-[30%] h-[40vh] mb-[60vh]">
       <Slider {...settings}>
         {rdata.map((data) => {
           return (
