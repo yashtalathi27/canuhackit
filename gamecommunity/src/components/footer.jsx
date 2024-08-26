@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logoimg from '../../public/Screenshot_from_2024-08-26_14-26-29-removebg-preview.png'
 
 export default function Footer() {
     return (
@@ -9,8 +10,8 @@ export default function Footer() {
                     <div className="mb-6 md:mb-0">
                         <Link to="/" className="flex items-center">
                             <img
-                                src="https://alexharkness.com/wp-content/uploads/2020/06/logo-2.png"
-                                className="mr-3 h-16"
+                                src={logoimg}
+                                className="mr-3 w-[35vh] h-[30vh]"
                                 alt="Logo"
                             />
                         </Link>
@@ -36,7 +37,7 @@ export default function Footer() {
                             <ul className="text-white font-medium">
                                 <li className="mb-4">
                                     <a
-                                        href="https://github.com/hiteshchoudhary"
+                                        href="https://github.com/yashtalathi27"
                                         className="hover:underline"
                                         target="_blank"
                                         rel="noreferrer"

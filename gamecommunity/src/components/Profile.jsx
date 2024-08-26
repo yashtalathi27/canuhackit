@@ -1,17 +1,14 @@
-import React from 'react'
+import React from "react";
+import Cardprofile from "./Cardprofile";
 
 function Profile() {
-
-    const name="yash";
+    const name = "yash";
 
     return (
-        <div className='' >
-            <h1 className='text-white text-5xl '>Profile: {name} </h1>
-
-            <img className='w-[150px] h-[120px] mt-[120px]' src="/home/yash/Desktop/CanYouHackIt/canuhackit/gamecommunity/src/images/cardImg.jpeg" alt="" />
-
+        <div className="flex justify-center h-[95vh] pt-[20vh]">
+            <Cardprofile />
         </div>
-    )
+    );
 }
 
-export default Profile
+export default Profile;

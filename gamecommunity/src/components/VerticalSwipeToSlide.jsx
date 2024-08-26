@@ -1,11 +1,26 @@
-import React, { Component } from "react";
+import React, {Component, useEffect} from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ReviewIndi from "./ReviewIndi";
 import image from "../images/download.jpeg";
 import  rdata  from "./reviewData";
+import axios from "axios";
 function VerticalSwipeToSlide() {
+
+
+  const [comment, setComments] = React.useState([]);
+
+  useEffect(() => {
+
+    const postId = window.location.pathname.split('/')[3];
+
+    axios.get(`http://localhost:6005/comments/${postId}/getcomments`, {withCredentials: true})
+        .then(games => setComments(games.data))
+        .catch(err => console.log(err))
+  }, []);
+
+
   const settings = {
     dots: false,
     infinite: true,
@@ -26,6 +41,7 @@ function VerticalSwipeToSlide() {
       <Slider {...settings}>
         {rdata.map((data) => {
           return (
+              // eslint-disable-next-line react/jsx-key
             <ReviewIndi
               content={data.content}
               name={data.name}

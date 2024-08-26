@@ -1,10 +1,12 @@
 const comments = require("../Models/commentsSchema");
+
 const createComment = async (req, res) => {
   let id = req.params?.postId;
   try {
     if (id) {
       const commentCreated = await comments.create({
-        postId: id,
+        postId: String,
+        id:Number,
         username: req.body?.username,
         comment: req.body?.comment,
       });
@@ -20,5 +22,7 @@ const createComment = async (req, res) => {
     });
   }
 };
+
+
 
 module.exports = createComment;

@@ -9,11 +9,15 @@ import VerticalSwipeToSlide from './VerticalSwipeToSlide';
 import Input from './Input';
 import { useForm } from 'react-hook-form';
 import axios from "axios";
+import {useAppStore} from "../store/index.js";
 
 export default function Reviews() {
 
   const {register,handleSubmit,reset} =useForm();
     const [images, setImages] = useState([]);
+    const [title, setTitle] = useState("");
+    const [comment, setComment] = useState("");
+    const {userInfo, setUserInfo} = useAppStore();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -32,9 +36,13 @@ export default function Reviews() {
     }, [setImages]);
 
 
-    const onSubmit =(data)=>{
-    console.log(data);
-    reset();
+    const onSubmit =()=>{
+        const postId = images._id;
+        axios.post(`http://localhost:6005/comments/${postId}/createComment`,{
+        postId: postId,
+        username: userInfo.displayName,
+        comment: comment,
+    })
   }
 
   return (
@@ -66,15 +74,15 @@ export default function Reviews() {
         <div className="bg-purple-800 p-6 rounded-lg shadow-lg mb-6">
           <h3 className="text-xl font-semibold mb-4">Leave a Comment</h3>
           <input
-            id="name"
-            placeholder='Enter your Name'
-            {...register('name')}
+            id="title"
+            placeholder='Enter Title'
+            onChange={(e)=>setTitle(e.target.value)}
             className="w-full mb-4 p-2 rounded-lg bg-gray-800 text-white"
           />
           <textarea
             id="comment"
             placeholder="Enter your comment"
-            {...register('comment')}
+            onChange={(e)=>setComment(e.target.value)}
             className="w-full mb-4 p-2 rounded-lg bg-gray-800 text-white"
             rows="4"
           ></textarea>
